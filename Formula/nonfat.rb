@@ -5,9 +5,14 @@ class Nonfat < Formula
   desc "Token-efficiency CLI for AI coding tools"
   homepage "https://nonfat.ai"
   license "Apache-2.0"
+  version "0.1.0"
+
   head "https://github.com/UserPsyChi/nonfat-cli.git", branch: "main"
 
   depends_on "node@20"
+
+  # Reserved until nonfat-cli is public and tagged v0.1.0 (WP-A10 release.yml pins url/sha256).
+  disable! date: "2026-12-31", because: "Awaiting public nonfat-cli v0.1.0 — see https://github.com/UserPsyChi/homebrew-tap"
 
   def install
     system "npm", "install", *std_npm_args

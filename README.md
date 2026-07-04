@@ -2,24 +2,36 @@
 
 Homebrew tap for [Nonfat](https://nonfat.ai) — token-efficiency CLI for AI coding tools.
 
-## Install
+**Status:** formula name `nonfat` is reserved here. Stable install lands when `UserPsyChi/nonfat-cli` is public and tagged `v0.1.0`.
+
+## Install (when released)
 
 ```sh
 brew install UserPsyChi/tap/nonfat
 ```
 
-Development build from `main`:
+Direct tap (optional):
 
 ```sh
-brew install --HEAD UserPsyChi/tap/nonfat
+brew tap UserPsyChi/tap
+brew install nonfat
 ```
 
-## Stable releases
+## Verify reservation
 
-Tagged releases (`v*`) update `Formula/nonfat.rb` with pinned `url` + `sha256` via the `nonfat-cli` release workflow (WP-A10).
+```sh
+brew search nonfat          # => userpsychi/tap/nonfat
+brew info UserPsyChi/tap/nonfat
+```
 
-Until `UserPsyChi/nonfat-cli` is public and tagged `v0.1.0`, only `--HEAD` installs are expected to work for maintainers.
+## Namespace
 
-## Namespace note
+| Path | Status |
+|---|---|
+| `UserPsyChi/tap/nonfat` | **Active** — this repo |
+| `nonfat/tap/nonfat` | Blocked until GitHub user [`nonfat`](https://github.com/nonfat) is recovered or `UserPsyChi` is renamed |
+| `brew install nonfat` (core) | Name free in homebrew-core; submit PR after public OSS release |
 
-Site/docs may reference `nonfat/tap/nonfat` once the `nonfat` GitHub account or org owns this tap. The formula name `nonfat` is reserved here under `UserPsyChi/tap`.
+## Release automation
+
+Tagged `v*` builds in `nonfat-cli` update this formula with pinned `url` + `sha256` and remove `disable!` (WP-A10 `release.yml`).
