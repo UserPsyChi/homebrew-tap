@@ -4,8 +4,8 @@
 class Nonfat < Formula
   desc "Token-efficiency CLI for AI coding tools"
   homepage "https://nonfat.ai"
-  license "Apache-2.0"
   version "0.1.0"
+  license "Apache-2.0"
 
   head "https://github.com/UserPsyChi/nonfat-cli.git", branch: "main"
 
