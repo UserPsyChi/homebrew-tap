@@ -9,10 +9,10 @@ class Nonfat < Formula
 
   head "https://github.com/UserPsyChi/nonfat-cli.git", branch: "main"
 
-  depends_on "node@20"
-
   # Reserved until nonfat-cli is public and tagged v0.1.0 (WP-A10 release.yml pins url/sha256).
   disable! date: "2026-12-31", because: "Awaiting public nonfat-cli v0.1.0 — see https://github.com/UserPsyChi/homebrew-tap"
+
+  depends_on "node@20"
 
   def install
     system "npm", "install", *std_npm_args
